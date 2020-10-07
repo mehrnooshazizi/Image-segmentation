@@ -40,8 +40,8 @@ while True:
     cv2.putText(result_blue,str(counter),(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),2)
     cv2.imshow('samples',result_blue)
 #############################YELLOW#######################################    
-    light_yellow = (24 - 10, 211 - 10,  255 - 10)
-    dark_yellow = (24 + 10, 211 + 10,  255 + 10)
+    light_yellow = (38 - 10, 170 - 10,  127 - 10)
+    dark_yellow = (38 + 10, 170 + 10,  127 + 10)
     mask_yellow = cv2.inRange(img, light_yellow , dark_yellow)
     
     result_yellow = cv2.bitwise_and(img , img , mask = mask_yellow)
@@ -51,8 +51,8 @@ while True:
     cv2.putText(result_yellow,str(counter),(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),2)
     cv2.imshow('samples',result_yellow)
 ##############################PINK########################################
-    light_pink = (163 - 10, 100 - 10,  245 - 10)
-    dark_pink = (163 + 10, 100 + 10,  245 + 10)
+    light_pink = (245 - 10, 100 - 10,  163 - 10)
+    dark_pink = (245 + 10, 100 + 10,  163 + 10)
     mask_pink = cv2.inRange(img, light_pink , dark_pink)
     
     result_pink = cv2.bitwise_and(img , img , mask = mask_pink)
@@ -62,8 +62,8 @@ while True:
     cv2.putText(result_pink,str(counter),(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),2)
     cv2.imshow('samples',result_pink)    
 ###############################RED########################################    
-    light_red = (178 - 10, 221 - 10,  224 - 10)
-    dark_red = (178 + 10, 221 + 10,  224 + 10)
+    light_red = (224 - 10, 221 - 10,  178 - 10)
+    dark_red = (224 + 10, 221 + 10,  178 + 10)
     mask_red = cv2.inRange(img, light_red, dark_red)
     
     result_red = cv2.bitwise_and(img , img , mask = mask_red)

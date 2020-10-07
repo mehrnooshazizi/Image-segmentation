@@ -9,6 +9,6 @@ Created on Wed Oct  7 15:33:53 2020
 import cv2
 import numpy as np
 
-bgr = np.uint8([[[56,89,47]]])
-hsv = cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)
+rgb = np.uint8([[[245,149,204]]])
+hsv = cv2.cvtColor(rgb, cv2.COLOR_RGB2HSV)
 print(hsv)
