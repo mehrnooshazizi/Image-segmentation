@@ -31,15 +31,27 @@ print(img)
 #result_red = cv2.bitwise_and(img , img , mask = mask_red)
 #result_red = cv2.cvtColor(result_red, cv2.COLOR_HSV2RGB)
 ######################################
-light_green = (69 - 10, 205 - 10,  177 - 10)
-dark_green = (69 + 10, 205 + 10,  177 + 10)
+light_green = (66 - 10, 120 - 10,  89 - 10)
+dark_green = (66 + 10, 120 + 10,  89 + 10)
 mask_green = cv2.inRange(img, light_green , dark_green)
 
-light_red = (179 - 10, 226 - 10,  237 - 10)
-dark_red = (179 + 10, 226 + 10,  237 + 10)
+light_blue = (105 - 10, 208 - 10,  180 - 10)
+dark_blue = (105 + 10, 208 + 10,  180 + 10)
+mask_blue = cv2.inRange(img, light_blue , dark_blue)
+
+light_yellow = (24 - 10, 211 - 10,  255 - 10)
+dark_yellow = (24 + 10, 211 + 10,  255 + 10)
+mask_yellow = cv2.inRange(img, light_yellow , dark_yellow)
+
+light_pink = (163 - 10, 100 - 10,  245 - 10)
+dark_pink = (163 + 10, 100 + 10,  245 + 10)
+mask_pink = cv2.inRange(img, light_pink , dark_pink)
+
+light_red = (178 - 10, 221 - 10,  224 - 10)
+dark_red = (178 + 10, 221 + 10,  224 + 10)
 mask_red = cv2.inRange(img, light_red, dark_red)
 
-mask_final = mask_green + mask_red
+mask_final = mask_green + mask_blue + mask_yellow + mask_pink + mask_red
 result_final = cv2.bitwise_and(img , img , mask = mask_final)
 result_final = cv2.cvtColor(result_final, cv2.COLOR_HSV2RGB)
 
