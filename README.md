@@ -1,2 +1,2 @@
-# Image segmentation
+# Real Time Color Detection
  
